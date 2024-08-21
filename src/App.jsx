@@ -1,16 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import UserDetails from './UserDetails';
+import Parent from './Parent';
 
 
 
 function App() {
 
+    const user ={
+      name:'John',
+      age:35
+    }
+
   return (
-    <div className='w-full'>
-         <h1 className='flex text-justify justify-center  text-3xl text-blue-700'>Understanding UPDATE Method in REST API</h1> 
-         <br/><br/>  
-         <UserDetails />         
+    <div className='w-full  flex  justify-center py-20'>
+         <h1 className='flex text-justify justify-center  text-3xl text-blue-700'>Understanding Prop Drilling in React Js</h1> 
+         <br/><br/>
+         <div className='fixed flex-col mx-auto py-40 px-8 text-pretty text-center text-3xl'>
+           <Parent  user={user} />
+         </div>
     </div>
   )
 }
